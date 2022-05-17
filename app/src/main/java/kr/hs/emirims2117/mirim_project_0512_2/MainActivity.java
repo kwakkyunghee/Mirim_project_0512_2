@@ -2,12 +2,15 @@ package kr.hs.emirims2117.mirim_project_0512_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
     EditText edit1, edit2;
@@ -46,6 +49,35 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+        btnPlus.setOnClickListener(btnListener);
+        btnMinus.setOnClickListener(btnListener);
+        btnMulti.setOnClickListener(btnListener);
+        btnDivide.setOnClickListener(btnListener);
+
 
     }
+    View.OnClickListener btnListener=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            int n1=Integer.parseInt(edit1.getText().toString());
+            int n2=Integer.parseInt(edit2.getText().toString());
+            int result=0;
+            switch (view.getId()){
+                case R.id.btn_plus:
+                    result=n1+n2;
+                    break;
+                case R.id.btn_minus:
+                    result=n1-n2;
+                    break;
+                case R.id.btn_multi:
+                    result=n1*n2;
+                    break;
+                case R.id.btn_divide:
+                    result=n1/n2;
+                    break;
+            }
+            textResult.setText("결과: "+result);
+
+        }
+    };
 }

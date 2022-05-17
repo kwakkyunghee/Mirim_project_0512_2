@@ -115,31 +115,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#7B4BC3"
         android:text="더하기"/>
     <Button
         android:id="@+id/btn_minus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#7B4BC3"
         android:text="빼기"/>
     <Button
         android:id="@+id/btn_multi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#7B4BC3"
         android:text="곱하기"/>
     <Button
         android:id="@+id/btn_divide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:backgroundTint="#7B4BC3"
         android:text="나누기"/>
 
     <TextView
         android:id="@+id/text_result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="#ff0000"
+        android:textColor="#3C3C3C"
         android:textSize="20sp"
         android:gravity="bottom"
         android:layout_marginBottom="30dp"
